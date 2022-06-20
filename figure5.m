@@ -65,9 +65,10 @@ temp2(:,1:72)=temp1(:,73:144);
 temp2(:,73:144)=temp1(:,1:72);
 Mean_Pre_compare_b585_585=temp2;
 
-color_1=cbrewer('seq','PuBu',8);
-color1=cbrewer('div','Spectral',10);
-color2=[color1([1,3,5],:);[0.8,0.8,0.8];[0.8,0.8,0.8];color1([6,8,10],:)];
+load('D:\3_20\color_libraries-master\Matlab\colorscheme.mat')%IPCC color
+color1=colorscheme_RGB.temperature_11_RGB;
+color2=[color1([1,3,5],:);[0.8,0.8,0.8];[0.8,0.8,0.8];color1([7,9,11],:)];
+color2=flipud(color2);
 n_title={'SSP5-8.5','SSP1-2.6','SSP2-4.5','SSP3-7.0'};
 figure
 time1=2015:2100;
@@ -87,7 +88,7 @@ patch([time1'; flipud(time1')], [Min_Pre_b585_585_m10_yr;flipud(Max_Pre_b585_585
  set(gca,'TickDir', 'out', 'YMinorTick', 'on')
  % xlabel('Year')
   title(n_title{1})
-  legend({'CMIP6(9)', 'Emulator-3mon'})
+  legend({'CMIP6(9)', 'PREMU'})
   legend('boxoff')
   
   

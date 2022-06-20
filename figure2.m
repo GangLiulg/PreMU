@@ -3,7 +3,7 @@
 % please run Cal_GSWP3_1.m before
 
 clear score_0116_3mon
-for imon=1
+for imon=7
     temp1=squeeze(temp_tmp(:,imon,:));
     [coeff,score,latent,tsquared,explained,mu] = pca(temp1(:,1:50)');
    % score_0116_3mon(:,:,imon)=temp1'*coeff(:,1:10);
@@ -80,13 +80,14 @@ m_proj('Robinson','long',LONGLIMS,'lat',LATLIMS);% ????????
 m_pcolor(Plg,Plt,flipud(LAIC6t));
 
 shading flat;
-color1=cbrewer('seq', 'YlOrRd', 6);
-color2=cbrewer('seq','YlGn',5);
-color=[flipud(color2(2:5,:));[0.9,0.9,0.9];[0.9,0.9,0.9];color1(2:5,:)];
+load('D:\3_20\color_libraries-master\Matlab\colorscheme.mat')%IPCC color
+color1=colorscheme_RGB.temperature_11_RGB;
+color2=[color1([2:5],:);[0.9,0.9,0.9];[0.9,0.9,0.9];color1([7:10],:)];
+color=flipud(color2);
 
 colormap(color);
 caxis([-0.025,0.025])
-m_coast;
+m_coast('color',[0.3,0.3,0.3]);
 %m_grid('xtick',[-90:90:90],'ytick',[-60:30:60],'fontsize',7,'xaxis','middle');%grid设置
 m_grid('xtick',[-90:90:90],'ytick',[-90:30:90],'fontsize',7,'xaxis','bottom');%grid设置
 

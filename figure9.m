@@ -5,10 +5,10 @@
 
 Model_name={'UKESM1-0-LL','MPI-ESM1-2-LR','MIROC6','IPSL-CM6A-LR','GFDL-ESM4','EC-Earth3','CanESM5','CESM2','ACCESS-ESM1-5'};
 
-color_1=cbrewer('seq','PuBu',8);
-color1=cbrewer('div','Spectral',10);
-color2=[color1([1,3,5],:);[0.8,0.8,0.8];[0.8,0.8,0.8];color1([6,8,10],:)];
-
+load('D:\3_20\color_libraries-master\Matlab\colorscheme.mat')%IPCC color
+color1=colorscheme_RGB.temperature_11_RGB;
+color2=[color1([1,3,5],:);[0.8,0.8,0.8];[0.8,0.8,0.8];color1([7,9,11],:)];
+color2=flipud(color2);
 clear temp1 temp2
 for k=1:9
     temp1=rot90(Pre_compare_b585_126_m10_9100(:,:,k));

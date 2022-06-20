@@ -1,7 +1,9 @@
 %% Fig3
 % please run Cal_GSWP3_2.m before running this code
-color1=cbrewer('div','Spectral',10);
-color2=[color1([1,3,5],:);[0.8,0.8,0.8];[0.8,0.8,0.8];color1([6,8,10],:)];
+
+load('D:\3_20\color_libraries-master\Matlab\colorscheme.mat')%IPCC color
+color1=colorscheme_RGB.temperature_11_RGB;
+color2=[color1([1,3,5],:);[0.8,0.8,0.8];[0.8,0.8,0.8];color1([7,9,11],:)];
 color2=flipud(color2);
 
 figure
