@@ -12,7 +12,9 @@ Cal_ESMs_1.m is for calculating the scores of the gridded temeprature under four
 
 Cal_GSWP3_2.m is for calibration and validation.
 
-Figure2.m-Figure10.m is for all figures in Liu et al.(2022).
+Figure2.m-Figure11.m is for all figures in Liu et al.(2022).
+
+Driving data can be otained from https://disk.pku.edu.cn:443/link/B6BADE68950C07B96367E11843F6FFA9
 
 # Citing PreMU
 Scientific publications using PREMU should cite the following publication:
