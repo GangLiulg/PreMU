@@ -67,7 +67,7 @@ Mean_Pre_compare_b585_585=temp2;
 
 load('D:\3_20\color_libraries-master\Matlab\colorscheme.mat')%IPCC color
 color1=colorscheme_RGB.temperature_11_RGB;
-color2=[color1([1,3,5],:);[0.8,0.8,0.8];[0.8,0.8,0.8];color1([7,9,11],:)];
+color2=[color1([1,2,4],:);[0.85,0.85,0.85];[0.85,0.85,0.85];color1([8,10,11],:)];
 color2=flipud(color2);
 n_title={'SSP5-8.5','SSP1-2.6','SSP2-4.5','SSP3-7.0'};
 figure

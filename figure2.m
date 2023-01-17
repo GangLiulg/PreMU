@@ -71,7 +71,7 @@ load coastlines
 
 LAIC6t=PCA_coeff(:,:,i-1);
 LATLIMS=[-90,90];
-LONGLIMS=[-180,180];
+LONGLIMS=[-179.5,179.5];
 lat=linspace(-90,90,72);
 long=linspace(-180,180,144);
 [Plg,Plt]=meshgrid(long',lat');%b2

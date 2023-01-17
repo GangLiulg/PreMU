@@ -83,7 +83,7 @@ colormap(axes_1,color2);
 caxis([-200,200])
 %m_coast;
 m_grid('xtick',[-90:90:90],'ytick',[-90:30:90],'fontsize',7,'xaxis','bottom');%grid设置
-
+text(-4.9,-1.2,'Calibration','rotation',90)
 
 
   
@@ -155,7 +155,7 @@ long=linspace(-180,180,144);
 m_proj('Robinson','long',LONGLIMS,'lat',LATLIMS);% ????????
     
 m_pcolor(Plg,Plt,flipud(LAIC6t));
-
+text(-4.9,-0.9,'Verification','rotation',90)
 shading flat;
 
 colormap(axes_5,color2);
@@ -245,6 +245,7 @@ m_grid('xtick',[-90:90:90],'ytick',[-90:30:90],'fontsize',7,'xaxis','bottom');%g
   text(5.6,6.38,'f','fontweight', 'bold')
 
   text(5.6,1.9,'h','fontweight', 'bold')
+
 l1=text(1985,395,'Calibration');
 set(l1,'rotation',90)
 l1=text(1985,108,'Verification');
